@@ -3,24 +3,25 @@ cask "pgwd" do
   name "pgwd"
   desc "Postgres Watch Dog - monitor PostgreSQL connections and notify via Slack/Loki"
   homepage "https://github.com/hrodrig/pgwd"
-  version "0.5.0"
+  version "0.5.10"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "pgwd"
+  manpage "share/man/man1/pgwd.1"
 
   on_macos do
     on_intel do
       url "https://github.com/hrodrig/pgwd/releases/download/v#{version}/pgwd_v#{version}_darwin_amd64.tar.gz",
         verified: "github.com/hrodrig/pgwd/"
-      sha256 "4672eb7bfdfa0f4f6c631f7975cc3ad5d784cf5a2b66dfee4962be22ec516db9"
+      sha256 "534630cd88f7c58c845d33e67e1e8399e4d8ffe82153a7eaeb50625d42a3e7ba"
     end
     on_arm do
       url "https://github.com/hrodrig/pgwd/releases/download/v#{version}/pgwd_v#{version}_darwin_arm64.tar.gz",
         verified: "github.com/hrodrig/pgwd/"
-      sha256 "4230a1d4033c3f804989e6edb44a361eefe1622399586b6b1c2128aecd2ee455"
+      sha256 "45bac43f83f0a832d9262f55ae60da36af067fbbe147860bd4b48eebb227a345"
     end
   end
 
@@ -28,12 +29,12 @@ cask "pgwd" do
     on_intel do
       url "https://github.com/hrodrig/pgwd/releases/download/v#{version}/pgwd_v#{version}_linux_amd64.tar.gz",
         verified: "github.com/hrodrig/pgwd/"
-      sha256 "6e46ffecfb16852808af021002762bf780e32e2a2cce194a03e04e44b650f2a8"
+      sha256 "75b822f1c25ecfb561022ccc6a5d0a52a2dd8b81172c6bf0ca84b12699535092"
     end
     on_arm do
       url "https://github.com/hrodrig/pgwd/releases/download/v#{version}/pgwd_v#{version}_linux_arm64.tar.gz",
         verified: "github.com/hrodrig/pgwd/"
-      sha256 "8514943c0dda98ee1293410fd716c72165d1ae6bed78c906f9dfb5bef91243ec"
+      sha256 "f5e419bb492fe35a767c662e0e12dc0dc5bf7396166b2c49feeac84099f5678f"
     end
   end
 
